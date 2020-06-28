@@ -13,7 +13,7 @@ import { Container, Error } from './styles';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
-  icon: React.ComponentType<IconBaseProps>;
+  icon?: React.ComponentType<IconBaseProps>;
   containerStyle?: object;
 }
 
@@ -48,6 +48,7 @@ const Input: React.FC<InputProps> = ({
 
   return (
     <Container
+      data-testid="input-container"
       style={containerStyle}
       isErrored={!!error}
       isFocused={isFocused}

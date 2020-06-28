@@ -110,7 +110,7 @@ const Profile: React.FC = () => {
         });
       }
     },
-    [addToast, history],
+    [updateUser, addToast, history],
   );
 
   const handleAvatarChange = useCallback(
